@@ -21,11 +21,22 @@ fedex home page
 
 
 fedex shipping page
+    [Documentation]  This Test case is to verify shipping page
+    [Tags]  shipping   P2
+	# Open Browser			${HOME_PAGE} 	${BROWSER}
+    wait until page contains  fedex
+
+fedex tracking page
+    [Documentation]  This Test case is to verify tracking page
+    [Tags]  tracking   P2
+	# Open Browser			${HOME_PAGE} 	${BROWSER}
+    wait until page contains  fedex
+
+fedex shipping page
     [Documentation]  This Test case is to verify Fedex
     [Tags]  Home   P2
 	# Open Browser			${HOME_PAGE} 	${BROWSER}
     wait until page contains  fedex
-
 
 
 
