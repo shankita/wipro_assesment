@@ -12,6 +12,9 @@ ${BROWSER}		chrome
 ${HOME_PAGE}     https://www.fedex.com/en-gb/home.html
 ${English}  https://www.fedex.com/en-nl/home.html
 ${Accept_Cookies}  ACCEPT ALL COOKIES
+${Shipping}   //span[normalize-space()='Shipping']
+${Ship_all_feature}  //a[@title='ship']
+
 
 *** Test Cases ***
 fedex home page
@@ -24,7 +27,10 @@ fedex shipping page
     [Documentation]  This Test case is to verify shipping page
     [Tags]  shipping   P2
 	# Open Browser			${HOME_PAGE} 	${BROWSER}
-    wait until page contains  fedex
+    click element  ${Shipping}
+    click element  ${Ship_all_feature}
+    wait until page contains  Enter your user ID and password to log in
+
 
 fedex tracking page
     [Documentation]  This Test case is to verify tracking page
