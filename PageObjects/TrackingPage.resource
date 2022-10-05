@@ -2,6 +2,7 @@
 # ${Tracking}   //span[normalize-space()='Tracking']
 ${Tracking}   //button[@aria-label='Tracking']
 
+${Tracking_number}  //input[@id='trackingModuleTrackingNum']
 
 
 ***Keywords***

@@ -2,7 +2,8 @@
 
 ${BROWSER}		chrome
 ${HOME_PAGE}     https://www.fedex.com/en-gb/home.html
-
+${English}  https://www.fedex.com/en-nl/home.html
+${Accept_Cookies}  ACCEPT ALL COOKIES
 
 
 *** Keywords ***
