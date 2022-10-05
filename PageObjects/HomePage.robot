@@ -12,5 +12,5 @@ Login to fedex home page
     Maximize Browser Window
     wait until page contains  fedex
     click link  ${English}
-    Click Button  ${Accept_Cookies}
+    Run Keyword And Ignore Error  Click Button  ${Accept_Cookies}
     sleep  2s
