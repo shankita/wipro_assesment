@@ -15,16 +15,16 @@ Login
     [Arguments]  ${user}  ${password} 
 
 	click element  ${Signup}
-	sleep  5s
+	# sleep  5s
     click link  ${Login_link}
-	sleep  5s
+	# sleep  5s
     wait until page contains  Enter your user ID and password to log in
     Input Text  ${User_name}  ${user} 
-	sleep  5s
+	# sleep  5s
 	Input Text  ${Password_text}  ${password}
-	sleep  5s
+	# sleep  5s
     Click element  ${Login_button}  
-    sleep  5s
+    # sleep  5s
     Page Should Contain  Manage your shipments
 
 
