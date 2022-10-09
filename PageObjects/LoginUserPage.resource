@@ -34,13 +34,14 @@ empty passowrd check
     [Arguments]  ${user} 
 	
 	click element  ${Signup}
-	sleep  5s
+	# sleep  5s
     click link  ${Login_link}
-	sleep  5s
-    wait until page contains  Enter your user ID and password to log in
+	# sleep  5s
+    wait until page contains  Enter your user ID and password to log in  timeout=10s
     Input Text  ${User_name}  ${user} 
+    Wait Until Page Contains Element  ${Login_button} 
     Click element  ${Login_button}  
-    sleep  2s
+    # sleep  2s
     Page Should Contain  Both user ID and password are required to log in.
 
 
