@@ -15,7 +15,7 @@ fedex tracking page
     #click element  ${Tracking}
     Run Keyword And Ignore Error  Click Button  ${Accept_Cookies}
     Wait Until Element Is Enabled  ${Tracking}
-    Wait Until Element Is visible  ${Tracking}
+    Wait Until Element Is visible  ${Tracking}  timeout=10 
     sleep  3s
     click Button  ${Tracking}
     Input Text  ${Tracking_number}  ${Tracking_ID} 
