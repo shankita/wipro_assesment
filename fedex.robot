@@ -76,7 +76,7 @@ Test Case for fedex create user page
 Test Case for fedex virtual assistence page 
     [Documentation]  This Test case is to verify virtual assistence  page
     [Tags]  virtualassistence  P1
-    fedex virtual assistence page  $(messages)
+    fedex virtual assistence page
 	
 	
 #End of test case
