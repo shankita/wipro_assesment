@@ -16,11 +16,16 @@ ${Login_button}  //div[@class='fdx-u-mb--3 fdx-u-mt--7 fdx-u-ml--3 fdx-u-mr--3']
 ${country}  India
 ${comapnyName}  FedEx
 ${address}  Amsterdam
+
+${threerow}  //span[@id='js-burger__box']
+
 ***Keywords***
 
 fedex new account page
     [Documentation]  This Test case is to verify new user account page
     [Arguments]  ${firstName}  ${LastName}  ${country}  ${comapnyName}  ${address}
+	
+    Run Keyword And Ignore Error  Click element  ${threerow}
 	click button  ${Account}
 	click link  ${Open_account}
 	Page Should Contain  Open a free account

@@ -7,12 +7,14 @@ ${User_name}  //input[@id='userId']
 ${Password_text}  //input[@id='password']
 ${Login_button}  //div[@class='fdx-u-mb--3 fdx-u-mt--7 fdx-u-ml--3 fdx-u-mr--3']//div[4]
 ${Resetpassword_link}  //a[@id='requestCode-btn']
+${threerow}  //span[@id='js-burger__box']
 
 ***Keywords***
 
 Login 
     [Documentation]  This Test case is to verify valid user login page
     [Arguments]  ${user}  ${password} 
+    Run Keyword And Ignore Error  Click element  ${threerow}
 
 	click element  ${Signup}
 	# sleep  5s
