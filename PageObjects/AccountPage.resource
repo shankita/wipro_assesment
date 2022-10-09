@@ -21,7 +21,6 @@ ${address}  Amsterdam
 fedex new account page
     [Documentation]  This Test case is to verify new user account page
     [Arguments]  ${firstName}  ${LastName}  ${country}  ${comapnyName}  ${address}
-	[Tags]  AccountCreation   P1
 	click button  ${Account}
 	click link  ${Open_account}
 	Page Should Contain  Open a free account

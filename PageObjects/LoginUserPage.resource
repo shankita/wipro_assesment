@@ -13,8 +13,7 @@ ${Resetpassword_link}  //a[@id='requestCode-btn']
 Login 
     [Documentation]  This Test case is to verify valid user login page
     [Arguments]  ${user}  ${password} 
-	[Tags]  login   P2
-	
+
 	click element  ${Signup}
 	sleep  5s
     click link  ${Login_link}

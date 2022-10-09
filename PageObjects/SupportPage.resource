@@ -8,7 +8,6 @@ ${New_cust}  //a[normalize-space()='New Customer Centre']
 ***Keywords***
 fedex support page
     [Documentation]  This Test case is to verify Fedex
-    [Tags]  Support   P2
     wait until page contains  fedex
     # click element  ${Support}
     click button  ${Support}
