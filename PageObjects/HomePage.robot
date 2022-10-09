@@ -12,6 +12,7 @@ Open to home page
 	Open Browser			${HOME_PAGE} 	${BROWSER}
     Maximize Browser Window
     wait until page contains  fedex
+    Set Window Size  1382  744
     click link  ${English}
     Run Keyword And Ignore Error  Click Button  ${Accept_Cookies}
     sleep  2s

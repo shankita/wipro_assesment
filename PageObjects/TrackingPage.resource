@@ -13,6 +13,8 @@ fedex tracking page
     [Documentation]  This Test case is to verify tracking page
     [Arguments]  ${Tracking_ID} 
     #click element  ${Tracking}
+    ${width}	${height}=	Get Window Size	
+    log  current page size is width ${width} height ${height}
     Run Keyword And Ignore Error  Click Button  ${Accept_Cookies}
     Wait Until Element Is Enabled  ${Tracking}
     Wait Until Element Is visible  ${Tracking}  timeout=10 
