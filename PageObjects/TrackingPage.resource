@@ -2,7 +2,7 @@
 #${Tracking}   //span[normalize-space()='Tracking']
 ${Tracking}   //button[@aria-label='Tracking']
 ${Accept_Cookies}  ACCEPT ALL COOKIES
-
+${threerow}  //span[@class='hamburger-box']
 
 ${Tracking_number}  //input[@id='trackingModuleTrackingNum']
 
@@ -17,8 +17,9 @@ fedex tracking page
     ${width}	${height}=	Get Window Size	
     log  current page size is width ${width} height ${height}
     Run Keyword And Ignore Error  Click Button  ${Accept_Cookies}
+    Run Keyword And Ignore Error  Click element  ${threerow}
     Wait Until Element Is Enabled  ${Tracking}
-    Wait Until Element Is visible  ${Tracking}  timeout=10 
+    Wait Until Element Is visible  ${Tracking}  timeout=5 
     sleep  3s
     click Button  ${Tracking}
     Input Text  ${Tracking_number}  ${Tracking_ID} 
