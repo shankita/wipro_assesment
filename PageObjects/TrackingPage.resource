@@ -13,6 +13,7 @@ fedex tracking page
     [Arguments]  ${Tracking_ID} 
     #click element  ${Tracking}
     Wait Until Element Is Enabled  ${Tracking}
+    sleep  3s
     click Button  ${Tracking}
     Input Text  ${Tracking_number}  ${Tracking_ID} 
     Click Button  Track  
