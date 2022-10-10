@@ -15,8 +15,10 @@ Resource  PageObjects/VirtualAssistence.resource
 Test Teardown    Close All Browsers
 Test Setup  Open home page
 
-*** Variables ***
+Test Timeout       ${timeout}
 
+
+*** Variables ***
 
 
 *** Test Cases ***
