@@ -9,10 +9,11 @@ Resource  PageObjects/CreateUserPage.resource
 Resource  PageObjects/AccountPage.resource
 Resource  PageObjects/VirtualAssistence.resource
 
-Suite Teardown    Close All Browsers
-Suite Setup  Open to home page
+#Suite Teardown    Close All Browsers
+#Suite Setup  Open to home page
 
-
+Test Teardown    Close All Browsers
+Test Setup  Open home page
 
 *** Variables ***
 
@@ -29,8 +30,7 @@ Test case for fedex shipping page
     [Documentation]  This Test case is to verify shipping page
     [Tags]  shipping   P1
     fedex shipping page
-
-
+    
 Test Case for fedex tracking page 
     [Documentation]  This Test case is to verify tracking page
     [Tags]  tracking   P1
@@ -43,10 +43,12 @@ Test Case for fedex Support page
     fedex support page
 
 
-# Test Case for fedex Login page 
-#     [Documentation]  This Test case is to verify Login page
-#     [Tags]  SignIn  P1
-#     Login  ${user}  ${password} 
+ Test Case for fedex Login page 
+     [Documentation]  This Test case is to verify Login page
+     [Tags]  SignIn  P1
+     Login  ${user}  ${password} 
+     wait until page contains  fedex
+     #Logout
 
 	
 Test Case for empty password page check
@@ -76,7 +78,7 @@ Test Case for fedex create user page
 Test Case for fedex virtual assistence page 
     [Documentation]  This Test case is to verify virtual assistence  page
     [Tags]  virtualassistence  P1
-    fedex virtual assistence page
+    fedex virtual assistence page  ${message}
 	
 	
 #End of test case

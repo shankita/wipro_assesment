@@ -1,6 +1,6 @@
 **Variables***
-#${Tracking}   //span[normalize-space()='Tracking']
-${Tracking}   //button[@aria-label='Tracking']
+${Tracking}   //span[normalize-space()='Tracking']
+#${Tracking}   //button[@aria-label='Tracking']
 ${Accept_Cookies}  ACCEPT ALL COOKIES
 ${threerow}  //span[@id='js-burger__box']
 ${Tracking_number}  //input[@id='trackingModuleTrackingNum']
@@ -20,7 +20,7 @@ fedex tracking page
     Wait Until Element Is Enabled  ${Tracking}
     Wait Until Element Is visible  ${Tracking}  timeout=5 
     sleep  3s
-    click Button  ${Tracking}
+    click element  ${Tracking}
     Input Text  ${Tracking_number}  ${Tracking_ID} 
     Click Button  Track  
     sleep  2s

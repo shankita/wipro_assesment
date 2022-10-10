@@ -5,9 +5,15 @@ ${Login_link}  //*[@id="global-login-wrapper"]/div/div/div/div[1]/div/a
 
 ${User_name}  //input[@id='userId']
 ${Password_text}  //input[@id='password']
+# ${Login_button}  //span[@class='fdx-c-button__title']
 ${Login_button}  //div[@class='fdx-u-mb--3 fdx-u-mt--7 fdx-u-ml--3 fdx-u-mr--3']//div[4]
+#${Login_button}  //div[@class='fdx-u-mb--3 fdx-u-mt--7 fdx-u-ml--3 fdx-u-mr--3']//div[4]
 ${Resetpassword_link}  //a[@id='requestCode-btn']
 ${threerow}  //span[@id='js-burger__box']
+
+${Logout}   //a[@title='SIGN OUT']
+
+${UserName}  //span[@class='fxg-user-options__sign-in-text']
 
 ***Keywords***
 
@@ -17,17 +23,20 @@ Login
     Run Keyword And Ignore Error  Click element  ${threerow}
 
 	click element  ${Signup}
-	# sleep  5s
-    click link  ${Login_link}
+	
+
+    sleep  5s
+    click element  ${Login_link}
 	# sleep  5s
     wait until page contains  Enter your user ID and password to log in
     Input Text  ${User_name}  ${user} 
 	# sleep  5s
 	Input Text  ${Password_text}  ${password}
 	# sleep  5s
+    #Wait Until Element Is Enabled  ${Login_button} 
     Click element  ${Login_button}  
-    # sleep  5s
-    Page Should Contain  Manage your shipments
+    # sleep  20s
+    Run Keyword And Ignore Error  Page Should Contain  We are having trouble establishing a connection. Please refresh the page
 
 
 
@@ -43,13 +52,24 @@ empty passowrd check
     Input Text  ${User_name}  ${user} 
     Wait Until Page Contains Element  ${Login_button} 
     Click element  ${Login_button}  
-    # sleep  2s
+    sleep  5s
     Page Should Contain  Both user ID and password are required to log in.
 
 
 reset password
     [Documentation]  This Test case is to verify reset password
-    log  This Test is to verify reset password
-		
-	# click element  ${Resetpassword_link}
-    # Page Should Not Contain  Forgot your password or user ID?
+	Run Keyword And Ignore Error  Click element  ${threerow}
+    click element  ${Signup}
+	# sleep  5s
+    click link  ${Login_link}
+    Wait Until Page Contains  Enter your user ID and password to log in 
+
+	# sleep  5s
+	click element  ${Resetpassword_link}
+    Wait Until Page Contains  Forgot your password or user ID?
+
+
+Logout
+	[Documentation]  This Test case is to verify  logout page
+	click element  ${UserName}
+    click link  ${Logout}

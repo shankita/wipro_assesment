@@ -1,5 +1,6 @@
 ***Variables***
-${Support}  //button[@aria-label='Support']
+#${Support}  //button[@aria-label='Support']
+${Support}  //span[normalize-space()='Support']
 ${New_cust}  //a[normalize-space()='New Customer Centre']
 ${threerow}  //span[@id='js-burger__box']
 
@@ -12,6 +13,6 @@ fedex support page
     wait until page contains  fedex
     # click element  ${Support}
     Run Keyword And Ignore Error  Click element  ${threerow}
-    click button  ${Support}
+    click element  ${Support}
     Click element  ${New_cust} 
     wait until page contains  New Customer Centre

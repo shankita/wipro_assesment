@@ -1,7 +1,7 @@
 **Variables***
 
-# ${Account}  //span[normalize-space()='Account']
-${Account}  //button[@aria-label='Account']
+${Account}  //span[normalize-space()='Account']
+#${Account}  //button[@aria-label='Account']
 ${Open_account}  //a[normalize-space()='OPEN AN ACCOUNT']
 ${Open_acc}  /html/body/div[1]/div[1]/div/div/div/div/header/nav/div/div/div/div[4]/div/div[4]/ul/li/div/div/div[5]/div/a
 
@@ -26,6 +26,6 @@ fedex new account page
     [Arguments]  ${firstName}  ${LastName}  ${country}  ${comapnyName}  ${address}
 	
     Run Keyword And Ignore Error  Click element  ${threerow}
-	click button  ${Account}
+	click element  ${Account}
 	click link  ${Open_account}
 	Page Should Contain  Open a free account
