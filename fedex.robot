@@ -45,7 +45,7 @@ Test Case for fedex Support page
     fedex support page
 
 
- Test Case for fedex Login page 
+Test Case for fedex Login page 
      [Documentation]  This Test case is to verify Login page
      [Tags]  SignIn  P1
      Login  ${user}  ${password} 
