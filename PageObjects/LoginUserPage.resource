@@ -21,11 +21,8 @@ Login
     [Documentation]  This Test case is to verify valid user login page
     [Arguments]  ${user}  ${password} 
     Run Keyword And Ignore Error  Click element  ${threerow}
-
 	click element  ${Signup}
-	
-
-    sleep  5s
+    sleep  2s
     click element  ${Login_link}
 	# sleep  5s
     wait until page contains  Enter your user ID and password to log in
@@ -36,6 +33,8 @@ Login
     #Wait Until Element Is Enabled  ${Login_button} 
     Click element  ${Login_button}  
     # sleep  20s
+    ${PageTitle}  Get Title
+    log  page title is ${PageTitle}
     Run Keyword And Ignore Error  Page Should Contain  We are having trouble establishing a connection. Please refresh the page
 
 
