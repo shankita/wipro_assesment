@@ -30,7 +30,7 @@ Test Case for fedex home page
 	
 Test case for fedex shipping page
     [Documentation]  This Test case is to verify shipping page
-    [Tags]  shipping   P1
+    [Tags]  shipping   P1  Jenkins
     fedex shipping page
     
 Test Case for fedex tracking page 
