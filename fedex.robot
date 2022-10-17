@@ -24,7 +24,7 @@ Test Timeout       ${timeout}
 *** Test Cases ***
 Test Case for fedex home page
     [Documentation]  This Test case is to verify Fedex
-    [Tags]  Home   P1
+    [Tags]  Home   P1  JenkinsDecorativTest
     wait until page contains  fedex
 
 	
