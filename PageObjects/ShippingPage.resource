@@ -1,7 +1,5 @@
 ***Variables***
 ${Shipping}   //span[normalize-space()='Shipping']
-#${Shipping}  //button[normalize-space()='Shipping']
-#${Ship_all_feature}  //a[@title='ship']
 ${Ship_all_feature}  //a[@title='ship']
 ${threerow}  //span[@id='js-burger__box']
 
