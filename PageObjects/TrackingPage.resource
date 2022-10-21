@@ -12,7 +12,7 @@ fedex tracking page
     [Documentation]  This Test case is to verify tracking page
     [Arguments]  ${Tracking_ID} 
     #click element  ${Tracking}
-    Set Window Size  1382  744
+    Set Window Size  1382  800
     ${width}	${height}=	Get Window Size	
     log  current page size is width ${width} height ${height}
     Run Keyword And Ignore Error  Click Button  ${Accept_Cookies}
